@@ -1,0 +1,37 @@
+topic: ~intro()
+language: enu
+
+concept:(food) [fruits chicken water eggs]
+concept:(joyful) \style=joyful\ \rspd=90\ \vct=95\
+concept:(low) \style=low\ \rspd=100\ \vct=110\
+concept:(fine) \style=neutral\ \rspd=100\ \vct=110\
+
+u: ([hey hello "hi there"]) Hey human, are you ready for today's session?
+    u1: ([yes yeah "oh yes"]) Let's get started. I am Nao, a humanoid robot. I can walk, talk, and play some music.
+                              Which book did you read yesterday?
+        u2: ({"I read"} _[yuck munamadan]) Ok $readbook=$1
+            u3: (which book did I read?) you read ^first["you read $readbook" "I don't know"]
+    u1: ([no nah "no thanks"]) Ok, no worries. You can come back to me when you feel like.
+
+    u1: ([e:MiddleTactilTouched]) You touched my middle head!
+    u1: ([e:RearTactilTouched]) You touched my rear head!
+
+
+
+
+
+#u: (hi there) Hey, how are you today? 
+#u1: (my name is _[dipesh anushka deepti anshul]) nice to meet you $1
+#u1: (I [want "would like"] {some} _~food) Sure! You must really like $1.
+#u1: (how are you today) Hello human, I am fine thank you, and you?
+#u1: (Good morning Nao did you sleep well) No damn! You forgot to switch me off!
+#u1: ([e:FrontTactilTouched e:MiddleTactilTouched e:RearTactilTouched]) You touched my head!
+
+
+#u: ([e:FrontTactilTouched e:MiddleTactilTouched e:RearTactilTouched]) You touched my head!
+#u:(e:ALMood.attention $ALMood.attention == "fullyEngaged") Hey
+#u:(e:ALMood.attention $ALMood.attention == "unengaged") Ahem, can you please pay attention to me?
+#u:(e:ALMood.attention $ALMood.attention == "fullyEngaged") Hey, How's it going?
+#u:(fine "e:ALMood.valence $ALMood.valence == "positive"") ~joyful Great! $onStopped=1
+#u:(fine "e:ALMood.valence $ALMood.valence == "negative"") ~low Hmm, you don't seem ok.
+#u:(e:ALMood.valenceChanged $ALMood.valenceChanged == "neutral") can you please smile? ^run(empathy_example/animations/Interested_01)

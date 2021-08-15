@@ -1,0 +1,44 @@
+topic: ~example_topic()
+language: enu
+
+concept:(food) [fruits chicken beef eggs]
+concept:(didactic) \style=didactic\ \rspd=10\ \vct=10\
+concept:(shut_up) [
+    "cut it out"
+    "knock it off"
+    "["could you" "can you"] {please} ["be quiet" "shut up"]"
+    "I can't take it any more"
+    "[keep remain] [quiet silent]"
+    "{please} {god} ["shut up" "be quiet"]"
+    "don't talk {"to me"} [anymore "any longer"]"
+    shush
+    "I don't want to [speak talk "discuss {it}"]  anymore"
+    "["let's stop" stop end] the [discussion conversation chat]"
+    "{let's please} stop [talking speaking discussing chatting]"
+    "keep it quiet"
+    "be quiet {please}"
+    "shut [it "your mouth"]"
+]
+
+
+u: (whats up?) ~didactic no damn. keep calm
+u: (I [want "would like"] {some} _~food) Sure! You must really like $1 .
+u: (how are you today) Hello human, I am fine thank you and you?
+u: (Good morning Nao did you sleep well) No damn! You forgot to switch me off!
+u: (shall I slap you?) please
+#u: ([e:FrontTactilTouched e:MiddleTactilTouched e:RearTactilTouched]) You touched my head!
+#u: ([e:HandRightBackTouched]) You touched my right hand!
+#u: ([e:HandLeftBackTouched]) You touched my left hand!
+
+u: (Do you want to be tested) Yes, please test me now
+u: (Are you ready for the test) Yes please, test me now!
+u: (Are you ready to eat) Yes, please, test me now
+
+u: (What is the current temperature?) the temperature is \pau=2000\ something
+u: (Hello there) \bound=W\ Hello my friends
+u: (ram ram ram) \bound=S\ Hello my friends
+
+u: (test test test) Yes, it works!
+    u1: ([cool awesome]) isn't it?
+
+u:(start counting) 0, 1, 2, 3, 4, 5.
