@@ -1,5 +1,8 @@
 # ropro-nao
-experiments performed with the nao robot
+This repo contains the code for the experiments performed with the NAO robot using the official Python SDK. The following experiments were performed:
+1. Dialog
+2. Movement
+3. Obstacle Detection
 
 ## NAO Robot Python SDK Installation Guide 
 
